@@ -1,0 +1,7 @@
+roleId,roleName,empId,empLastName
+"r001","Facilities","e001","Smith"
+"r002","Hydroponics","e002","George"
+"r001","Facilities","e003","Rave"
+"r002","Hydroponics","e001","Smith"
+"r003","Kitchen","e001","Smith"
+
