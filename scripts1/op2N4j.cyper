@@ -1,0 +1,1 @@
+(emp1:Employee{name: "Emp1"})-[:performs]->(task:Task{name:"Clean bathroom"})
