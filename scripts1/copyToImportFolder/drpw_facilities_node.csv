@@ -1,0 +1,8 @@
+id,facility_name,type,supported_tasks
+"f001","Seattle","Gateway",5
+"f002","Salt lake city","Receiving facility",3
+"f003","Raleigh-Durham","Receiving facility",3
+"f004","Philadelphia","Receiving facility",4
+"f005","Newark","Gateway",2
+"f006","Nashiville","Receiving facility",4
+"f007","Miami","Sales Office",3

@@ -1,0 +1,6 @@
+id,facility,lat,long,capacity,processingTasks
+"fac001","fac1",001,002,2,1
+"fac002","fac2",003,004,3,2
+"fac003","fac3",005,006,4,3
+"fac004","fac4",007,008,1,1
+"fac005","fac5",009,011,3,5
