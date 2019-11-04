@@ -1,0 +1,8 @@
+src,dest,relationship,cost
+"fac001","fac002","r001",32
+"fac002","fac003","r001",32
+"fac003","fac004","r001",32
+"fac004","fac005","r001",32
+"fac001","fac003","r001",32
+"fac001","fac004","r001",32
+"fac001","fac005","r001",32
