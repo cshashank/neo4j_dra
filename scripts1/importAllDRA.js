@@ -24,3 +24,8 @@ MATCH(source: Facility { id: row.src })
 MATCH(destination: Facility { id: row.dest })
 MERGE(source) - [: COST { cost: toInteger(row.cost) }] -> (destination)
 
+// update relationship initial cost 12, new 112
+
+match(f1: Facility{ id: "fac002" }) - [r] - (f2: Facility{ id: "fac003" }) 
+set r.cost=112 
+return r

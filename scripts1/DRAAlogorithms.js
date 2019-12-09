@@ -2,25 +2,25 @@ Dijkstra algo
 
 weighted
 
-MATCH (source:Task {id: "t001",empId:"e001"}),      
-	(destination:Task {id: "t008"})
-CALL algo.shortestPath.stream(source, destination,  "effort")
+MATCH(source: Facility { id: "fac002" }),
+    (destination: Facility { id: "fac004"})
+CALL algo.shortestPath.stream(source, destination, "cost")
 YIELD nodeId, cost
-RETURN algo.getNodeById(nodeId).id AS task, algo.getNodeById(nodeId).empId AS empId,cost
+RETURN algo.getNodeById(nodeId).id AS Facility, cost
 
 unweighted
 
-MATCH (source:Task {id: "t001",empId:"e001"}),      
-	(destination:Task {id: "t008"})
-CALL algo.shortestPath.stream(source, destination,  null)
+MATCH(source: Facility { id: "fac002" }),
+    (destination: Facility { id: "fac004"})
+CALL algo.shortestPath.stream(source, destination, null)
 YIELD nodeId, cost
-RETURN algo.getNodeById(nodeId).id AS task, algo.getNodeById(nodeId).empId AS empId,cost
+RETURN algo.getNodeById(nodeId).id AS Facility, cost
 
 
 Yen algo
 
-MATCH (start:Task {id:"t001"}),
-      (end:Task {id:"t011"})
+MATCH (start:Facility {id:"fac002"}),
+      (end:Facility {id:"fac004"})
 CALL algo.kShortestPaths.stream(start, end, 5, 'effort')
 YIELD index, nodeIds, path, costs
 RETURN index,
@@ -50,8 +50,8 @@ ORDER BY distance DESC
 LIMIT 10
 
 Single source shortest path (SSSP - S3P)
-MATCH (n:Task {id:"t001"})
-CALL algo.shortestPath.deltaStepping.stream(n, "effort", 1.0)
+MATCH (n:Facility {id:"fac001"})
+CALL algo.shortestPath.deltaStepping.stream(n, "cost", 1.0)
 YIELD nodeId, distance
 WHERE algo.isFinite(distance)
 RETURN algo.getNodeById(nodeId).id AS destination, distance
