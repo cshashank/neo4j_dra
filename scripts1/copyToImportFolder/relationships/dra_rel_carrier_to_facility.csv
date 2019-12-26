@@ -1,0 +1,11 @@
+carrier,facility,relationship
+"ca001","fac002","cf12"
+"ca002","fac002","cf22"
+"ca003","fac002","cf32"
+"ca004","fac002","cf42"
+"ca002","fac003","cf23"
+"ca004","fac004","cf44"
+"ca005","fac005","cf55"
+"ca006","fac003","cf63"
+"ca006","fac004","cf14"
+"ca002","fac005","cf85"

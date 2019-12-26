@@ -1,8 +1,0 @@
-client,facility,relationship
-"cl001","fac002","cf12"
-"fac002","fac003","cf23"
-"fac003","fac004","cf34"
-"fac004","fac005","cf45"
-"fac001","fac003","cf13"
-"fac001","fac004","cf14"
-"fac001","fac005","cf15"

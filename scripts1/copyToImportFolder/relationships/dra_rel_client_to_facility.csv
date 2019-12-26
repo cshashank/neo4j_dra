@@ -1,0 +1,11 @@
+client,facility,relationship
+"cl001","fac002","cf12"
+"cl002","fac002","cf22"
+"cl003","fac002","cf32"
+"cl004","fac002","cf42"
+"cl002","fac003","cf23"
+"cl004","fac004","cf44"
+"cl005","fac005","cf55"
+"cl006","fac003","cf63"
+"cl007","fac004","cf14"
+"cl008","fac005","cf85"
