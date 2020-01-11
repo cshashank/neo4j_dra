@@ -1,5 +1,4 @@
 // update relationship initial cost 12, new 112
-
 match(f1: Facility{ id: "fac001" }) - [r] - (f2: Facility{ id: "fac002" }) 
 set r.route="rc2f2" 
 return r
@@ -24,3 +23,6 @@ MATCH (n)
 where n.route="rc2f2"
 RETURN n 
 LIMIT 25
+
+
+
