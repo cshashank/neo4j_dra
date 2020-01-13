@@ -27,3 +27,8 @@ with p
 match shipFrom=(p)-[:SHIPPED_FROM]->(:Facility)
 match shipTo=(p)-[:SHIPPED_TO]->(:Facility)
 return p,shipFrom,shipTo
+
+match (p:Package {id:"package1"})
+with p
+match rFrom=(p)-[*]->(:Facility)
+return *
