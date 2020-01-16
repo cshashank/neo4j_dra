@@ -14,7 +14,12 @@ match(leg:Leg {legId:$legName})
 with leg,route
 merge (route)-[uses:USES]->(leg)
 
-
+//add package to facility
+:params {"package":"package1","facility":"fac001"}
+match(package:Package {name:$package})
+match(facility:Facility {id:$facility})
+with package,facility
+merge (package)-[arrived:ARRIVED]->(facility)
 
 
 :params {"legName":"legF5F4","fac1":"fac002","fac2":"fac005"}
@@ -46,3 +51,7 @@ where p.name='package1' AND f.id='fac005'
 merge (p)-[r:SHIPPED_TO]->(f)
 return r
 
+match(c1:Client) , (f1: Facility)
+where c1.id = "cl002" and f1.id = "fac001" 
+create (c1)-[r:BELONGS]->(f1)
+return r

@@ -32,17 +32,3 @@ LOAD CSV WITH HEADERS FROM uri AS row
 MATCH (client: Client {id: row.client})
 MATCH (facility: Facility {id: row.facility})
 MERGE (client) - [: BELONGS {rel: (row.relationship) }] -> (facility)
-
-// update relationship initial cost 12, new 112
-
-match(f1: Facility{ id: "fac002" }) - [r] - (f2: Facility{ id: "fac003" }) 
-set r.cost=112 
-return r
-
-match(c1:Client) , (f1: Facility)
-where c1.id = "cl002" and f1.id = "fac001" 
-create (c1)-[r:BELONGS]->(f1)
-return r
-
-match(c1: Client{ id: "cl002" }) - [r:BELONGS] - (f1: Facility{ id: "fac001" }) 
-delete r 

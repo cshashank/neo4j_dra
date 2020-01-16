@@ -1,0 +1,7 @@
+piece_id,piece_name,routeId,routeMap
+"pa001","Piece 1","r01","f001,f002,f003,f004"
+"pa002","Piece 2","r02","f005,f006,f005,f008"
+"pa003","Piece 3","r03","f002,f004,f008,f010"
+"pa004","Piece 4","r04","f009,f005,f007,f004"
+"pa005","Piece 5","r01","f001,f007,f003,f004"
+"pa006","Piece 6","r01","f001,f003,f006,f004"

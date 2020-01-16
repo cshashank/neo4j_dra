@@ -1,9 +1,10 @@
-WITH "file:///dra_node_facility.csv"
+WITH "file:///nodes/dra_facilities_node.csv"
 AS uri
 LOAD CSV WITH HEADERS FROM uri  AS row
-MERGE(facility:Facility {id:row.id})
+MERGE(facility:Facility {facilityId:row.id})
 SET facility.name = row.facility_name,
+    facility.type = row.type,
     facility.lat = row.lat,
     facility.long = row.long,
-    facility.capacity = row.capacity,
-    facility.processingTasks = row.processingTasks
+    facility.supportedTasks = row.supported_tasks,
+    facility.carriers = row.carriers

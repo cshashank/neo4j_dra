@@ -24,5 +24,10 @@ where n.route="rc2f2"
 RETURN n 
 LIMIT 25
 
+// update relationship initial cost 12, new 112
+
+match(f1: Facility{ id: "fac002" }) - [r] - (f2: Facility{ id: "fac003" }) 
+set r.cost=112 
+return r
 
 
