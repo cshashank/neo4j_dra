@@ -1,12 +1,12 @@
-id,facility_name,type,lat,long,supported_tasks,carriers,capacity
-"f001","Seattle","Gateway",34.0195259,-118.6919251,"labeling,verification","carrier1,carrier2,carrier3,carrier4",3
-"f002","Salt lake city","Receiving facility",54.0195259,-118.6919251,"labeling,verification,scanning","carrier1,carrier2,carrier5,carrier4",4
-"f003","Raleigh-Durham","Receiving facility",24.0195259,-118.6919251,"labeling,verification,scanning","carrier3,carrier4,carrier5","carrier6",2
-"f004","Philadelphia","Receiving facility",34.0195259,-128.6919251,"labeling,scanning","carrier2,carrier3",6
-"f005","Newark","Gateway",34.0195259,-118.6919251,"labeling,verification,scanning","carrier7,carrier8,carrier9,carrier4",4
-"f006","Nashiville","Receiving facility",34.0195259,-111.6919251,"labeling","carrier1,carrier2,carrier3,carrier4",7
-"f007","Miami","Sales Office",34.0195259,-148.6919251,"labeling,verification","carrier1,carrier2,carrier3,carrier4",5
-"f008","Detroit","Receiving facility",34.0195259,-112.6919251,"scanning","carrier1,carrier2,carrier3,carrier4",6
-"f009","New York","Gateway",54.0195259,-118.6919251,"labeling,verification","carrier1,carrier2,carrier3,carrier4",2
-"f010","Brampton","Receiving facility",38.0195259,-118.6919251,"scanning","carrier1,carrier2,carrier3,carrier4",7
-"f011","Dallas","Sales Office",14.0195259,-118.6919251,"labeling","carrier1","carrier2","carrier3","carrier4",5
+id,facility_name,type,lat,long,supported_tasks,carriers,capacity,pieceIds
+"f001","Seattle","Gateway",34.0195259,-118.6919251,"labeling,verification","carrier1,carrier2,carrier3,carrier4",3,"pa001,pa012,pa013"
+"f002","Salt lake city","Receiving facility",54.0195259,-118.6919251,"labeling,verification,scanning","carrier1,carrier2,carrier5,carrier4",4,"pa002,pa014"
+"f003","Raleigh-Durham","Receiving facility",24.0195259,-118.6919251,"labeling,verification,scanning","carrier3,carrier4,carrier5","carrier6",2,"pa003,pa015"
+"f004","Philadelphia","Receiving facility",34.0195259,-128.6919251,"labeling,scanning","carrier2,carrier3",6,"pa004,pa016"
+"f005","Newark","Gateway",34.0195259,-118.6919251,"labeling,verification,scanning","carrier7,carrier8,carrier9,carrier4",4,"pa005,pa017"
+"f006","Nashiville","Receiving facility",34.0195259,-111.6919251,"labeling","carrier1,carrier2,carrier3,carrier4",7,"pa006,pa018"
+"f007","Miami","Sales Office",34.0195259,-148.6919251,"labeling,verification","carrier1,carrier2,carrier3,carrier4",5,"pa007"
+"f008","Detroit","Receiving facility",34.0195259,-112.6919251,"scanning","carrier1,carrier2,carrier3,carrier4",6,"pa008"
+"f009","New York","Gateway",54.0195259,-118.6919251,"labeling,verification","carrier1,carrier2,carrier3,carrier4",2,"pa009"
+"f010","Brampton","Receiving facility",38.0195259,-118.6919251,"scanning","carrier1,carrier2,carrier3,carrier4",7,"pa010"
+"f011","Dallas","Sales Office",14.0195259,-118.6919251,"labeling","carrier1","carrier2","carrier3","carrier4",5,"pa011"
