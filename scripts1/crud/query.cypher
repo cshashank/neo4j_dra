@@ -32,3 +32,11 @@ match (p:Package {id:"package1"})
 with p
 match rFrom=(p)-[*]->(:Facility)
 return *
+
+match(f:Facility {facilityId:"f002"})
+match p=(f)-[:ECOST]->(:Facility)
+return p
+
+match(f:Facility {facilityId:"f002"})
+match p=(f)-[:ECOST*1..3]->(:Facility)
+return p

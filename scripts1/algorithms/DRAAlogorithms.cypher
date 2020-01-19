@@ -2,19 +2,19 @@ Dijkstra algo
 
 weighted
 
-MATCH(source: Facility { id: "fac002" }),
-    (destination: Facility { id: "fac004"})
+MATCH(source: Facility { facilityId: "f002" }),
+    (destination: Facility { facilityId: "f003"})
 CALL algo.shortestPath.stream(source, destination, "cost")
 YIELD nodeId, cost
-RETURN algo.getNodeById(nodeId).id AS Facility, cost
+RETURN algo.getNodeById(nodeId).facilityId AS Facility, cost
 
 unweighted
 
-MATCH(source: Facility { id: "fac002" }),
-    (destination: Facility { id: "fac004"})
+MATCH(source: Facility { facilityId: "f002" }),
+    (destination: Facility { facilityId: "f003"})
 CALL algo.shortestPath.stream(source, destination, null)
 YIELD nodeId, cost
-RETURN algo.getNodeById(nodeId).id AS Facility, cost
+RETURN algo.getNodeById(nodeId).facilityId AS Facility, cost
 
 
 Yen algo
