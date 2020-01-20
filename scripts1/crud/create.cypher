@@ -55,3 +55,13 @@ match(c1:Client) , (f1: Facility)
 where c1.id = "cl002" and f1.id = "fac001" 
 create (c1)-[r:BELONGS]->(f1)
 return r
+
+match(f:Facility {facilityId:"f001"})
+unwind split(f.pieces,",") as lPiece
+merge(lp:Piece {pieceId:lPiece})
+return lp
+
+match(f:Facility {facilityId:"f001"})
+call apoc.refactor.cloneNodes([f]) yield input,output 
+return f1
+

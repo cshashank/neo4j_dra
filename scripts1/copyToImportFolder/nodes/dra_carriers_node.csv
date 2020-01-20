@@ -1,4 +1,4 @@
-id,carrier_name
+carrierId,carrier_name
 "ca001","Carrier 1"
 "ca002","Carrier 2"
 "ca003","Carrier 3"

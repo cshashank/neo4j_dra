@@ -1,6 +1,7 @@
 WITH "file:///relationships/dra_rel_piece_arrive_at_facility.csv"
 AS uri
 LOAD CSV WITH HEADERS FROM uri AS row
-MATCH (piece:Piece {pieceId: row.piece})
-MATCH (facility:Facility {facilityId: row.facilityId})
-MERGE (client)-[:ARRIVED_AT {date: (row.date)}]->(facility)
+MATCH (piece:Piece {pieceId: row.pieceId})
+unwind split(row.arrivedFacilities,',') as legFacility
+MATCH (lf:Facility {facilityId:legFacility})
+MERGE (piece)-[:ARRIVED {date: (row.date)}]->(lf)

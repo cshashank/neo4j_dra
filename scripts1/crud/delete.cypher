@@ -11,4 +11,4 @@ match(p:Piece) delete p
 match(f:Facility)
 detach delete f
 
-
+MATCH (n:Piece) WHERE NOT EXISTS (n.name) delete n
