@@ -40,3 +40,5 @@ return p
 match(f:Facility {facilityId:"f002"})
 match p=(f)-[:ECOST*1..3]->(:Facility)
 return p
+
+match(f:Facility {facilityId:"f001"}) where not ID(f)=48 return f

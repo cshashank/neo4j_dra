@@ -3,5 +3,5 @@ AS uri
 LOAD CSV WITH HEADERS FROM uri AS row
 MATCH (piece:Piece {pieceId: row.pieceId})
 unwind split(row.arrivedFacilities,',') as legFacility
-MATCH (lf:Facility {facilityId:legFacility})
-MERGE (piece)-[:ARRIVED {date: (row.date)}]->(lf)
+MERGE (lf:Facility {facilityId:legFacility})
+MERGE (piece)-[:ARRIVED {date: (row.date),cost:1000000}]->(lf)

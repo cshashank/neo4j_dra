@@ -12,3 +12,7 @@ match(f:Facility)
 detach delete f
 
 MATCH (n:Piece) WHERE NOT EXISTS (n.name) delete n
+
+match(f:Facility {facilityId:"f001"}) where not ID(f)=48 detach delete f
+
+match(:Facility)-[ec:ECOST]-(:Facility) delete ec
