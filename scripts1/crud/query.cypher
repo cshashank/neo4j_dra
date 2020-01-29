@@ -22,7 +22,7 @@ return r
 match p=(:Client )-[:BELONGS {id:'ca005'}]->(facility:Facility)->[:BELONGS {id:'ca005'}]->(facility:Facility)
 RETURN p
 
-match (p:Package {id:"package1"})
+match (p:Piece {id:"pa001"})
 with p
 match shipFrom=(p)-[:SHIPPED_FROM]->(:Facility)
 match shipTo=(p)-[:SHIPPED_TO]->(:Facility)

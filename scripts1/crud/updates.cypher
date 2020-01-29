@@ -30,4 +30,7 @@ match(f1: Facility{ id: "fac002" }) - [r] - (f2: Facility{ id: "fac003" })
 set r.cost=112 
 return r
 
-
+match(p:Piece {pieceId:"pa001"}) 
+set p.processingTask1="scanning"
+set p.estimatedNumberOfDays=5
+return p

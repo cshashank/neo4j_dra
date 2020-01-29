@@ -3,7 +3,7 @@ Dijkstra algo
 weighted
 
 MATCH(source: Facility { facilityId: "f002" })
-MATCH(destination: Facility { facilityId: "f003"})
+MATCH(destination: Facility { facilityId: "f007"})
 WITH source,destination
 CALL algo.shortestPath.stream(source, destination, "cost")
 YIELD nodeId, cost
@@ -11,7 +11,7 @@ RETURN algo.getNodeById(nodeId).facilityId AS Facility, cost
 
 //skc
 MATCH(source: Facility { facilityId: "f002" })
-MATCH(destination: Facility { facilityId: "f003"})
+MATCH(destination: Facility { facilityId: "f007"})
 WITH source,destination
 CALL algo.shortestPath.stream(source, destination, "cost")
 YIELD nodeId, cost
